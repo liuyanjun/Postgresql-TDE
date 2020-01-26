@@ -1,1 +1,3 @@
-XTS-AES
+## XTS-AES
+#### The Advanced Encryption Standard (AES) is a Symmetric Block Cipher. AES comprises three block ciphers, AES-128, AES-192 and AES-256. Each cipher encrypts and decrypts data in blocks of 128 bits. When more than 128 bits are processed the method used is known as a mode of operation and there are different modes for different purposes such as ECB, CBC, OFB, CFB, CTR, and XTS. The Cipher Feedback (CFB) mode, which is similar to CBC, makes a block cipher into a self-synchronising Stream Cipher. The XEX mode (XOR-Encrypt-XOR) is a tweakable encryption mode created by Rogaway that offers efficient processing of consecutive blocks within one data unit.
+
