@@ -4,13 +4,13 @@
 
 ### ![Transparent data encryption] (https://www.cybertec-postgresql.com/wp-content/uploads/2017/11/PostgreSQL-instance-level-encryption2.jpg)
 
-#Development Plan
-###To-Do
-####2020.01.26
-*TDE概要设计和实现设计
-*AES实现算法
-*PG TDE 配置
-*TDE测试和验证
+# Development Plan
+### To-Do
+#### 2020.01.26
+* TDE概要设计和实现设计
+* AES实现算法
+* PG TDE 配置
+* TDE测试和验证
 
 
 
