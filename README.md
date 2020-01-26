@@ -16,7 +16,8 @@
 ### Transparent Database Encryption
 ### <img src="https://github.com/liuyanjun/Postgresql-TDE/blob/master/pg_lowlevel_io.png">
 
-####　Table, Index, Sequence file read and write function
+### Database file IO includes DB object, temperary file, log file and database operation
+#### Table, Index, Sequence file read and write function
 md.c
 This code manages relations that reside on magnetic disk.
 
@@ -41,7 +42,7 @@ void mdwrite(SMgrRelation reln, ForkNumber forknum, BlockNumber blocknum, char *
  
 void mdextend(SMgrRelation reln, ForkNumber forknum, BlockNumber blocknum, char *buffer, bool skipFsync)
 
-####　temperary table, index file read and write function
+#### temperary table, index file read and write function
 /backend/storage/file/buffile.c
 Management of large buffered files, primarily temporary files.
 
@@ -51,7 +52,7 @@ static void BufFileLoadBuffer(BufFile *file);
 static void BufFileDumpBuffer(BufFile *file);
 static int	BufFileFlush(BufFile *file);
 
-####　Write ahead log file read and write function
+#### Write ahead log file read and write function
 xlog.c
 PostgreSQL transaction log manager
 
@@ -110,7 +111,7 @@ PostgreSQL transaction log manager utility routines
 static void
 XLogRead(char *buf, TimeLineID tli, XLogRecPtr startptr, Size count)
 
-####　CLOG, SUBTRANS, MULTIXACT LOG file read and write function
+#### CLOG, SUBTRANS, MULTIXACT LOG file read and write function
 slru.c
 Simple LRU buffering for transaction status logfiles
 
@@ -143,6 +144,19 @@ SlruPhysicalReadPage(SlruCtl ctl, int pageno, int slotno)
  
 static bool
 SlruPhysicalWritePage(SlruCtl ctl, int pageno, int slotno, SlruFlush fdata)
+
+#### create, move, redo database operation
+ dbcommands.c
+ atabase management commands (create/drop database).
+ 
+DATABASE resource manager's routines
+void dbase_redo(XLogReaderState *record)
+
+CREATE DATABASE
+Oid createdb(const CreatedbStmt *stmt)
+
+ALTER DATABASE SET TABLESPACE
+static void movedb(const char *dbname, const char *tblspcname)
 
 ### Advanced Encryption Standard
 ### <img src="https://raw.githubusercontent.com/oYo-Byte/img_libs/master/blog/165259_mERh_2910723.png">
