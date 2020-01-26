@@ -27,5 +27,5 @@
 * http://momjian.us/
 * https://billtian.github.io/digoal.blog/
 ### Books
-*　《PostgreSQL数据库内核分析》
+* 《PostgreSQL数据库内核分析》
 * 《PostgreSQL技术内幕》
