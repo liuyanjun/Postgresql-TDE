@@ -47,9 +47,13 @@ void mdextend(SMgrRelation reln, ForkNumber forknum, BlockNumber blocknum, char 
 Management of large buffered files, primarily temporary files.
 
 static BufFile *makeBufFile(File firstfile);
+
 static void extendBufFile(BufFile *file);
+
 static void BufFileLoadBuffer(BufFile *file);
+
 static void BufFileDumpBuffer(BufFile *file);
+
 static int	BufFileFlush(BufFile *file);
 
 #### Write ahead log file read and write function
