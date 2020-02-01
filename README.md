@@ -42,7 +42,7 @@ void mdwrite(SMgrRelation reln, ForkNumber forknum, BlockNumber blocknum, char *
  
 void mdextend(SMgrRelation reln, ForkNumber forknum, BlockNumber blocknum, char *buffer, bool skipFsync)
 
-#### temperary table, index file read and write function
+#### temperary file read and write function for sorting and indexing
 /backend/storage/file/buffile.c
 Management of large buffered files, primarily temporary files.
 
